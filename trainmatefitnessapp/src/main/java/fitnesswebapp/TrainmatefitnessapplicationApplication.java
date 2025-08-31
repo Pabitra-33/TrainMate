@@ -9,5 +9,4 @@ public class TrainmatefitnessapplicationApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TrainmatefitnessapplicationApplication.class, args);
 	}
-
 }
