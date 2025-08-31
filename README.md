@@ -1,4 +1,9 @@
-
+<p align="center">
+  <img src="trainmate.png" alt="TrainMate Logo" width="1200" height="600"/>
+</p>
+<br>
+<br>
+<br>
 
 <h1 align="center">🏋️‍♂️ TrainMate</h1>
 <p align="center">
