@@ -32,7 +32,7 @@ public class GoalsController {
 	}
 
 	@PostMapping("/savegoal")
-	public String creategoal(Model model, HttpSession session, GoalBinding goalBinding) {
+	public String addGoal(Model model, HttpSession session, GoalBinding goalBinding) {
 		Customer entity = customerDao.findByCustomerName((String) session.getAttribute("username"));
 		if (entity == null) {
 			model.addAttribute("error", "Please Login !!!!!");
