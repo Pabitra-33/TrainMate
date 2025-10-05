@@ -20,10 +20,10 @@ import jakarta.servlet.http.HttpSession;
 public class GoalsController {
 
 	@Autowired
-	private CustomerDao customerDao;
+	private CustomerDao customerDao;//customer dao reference
 
 	@Autowired
-	private GoalsDao goalsDao;
+	private GoalsDao goalsDao;//goal dao reference
 
 	@GetMapping("/creategoal")
 	public String showGoal(Model model) {
