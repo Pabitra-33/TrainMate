@@ -13,7 +13,7 @@ import fitnesswebapp.dao.CustomerDao;
 import fitnesswebapp.model.Customer;
 
 @Controller
-public class RegisterController {
+public class CustomerRegisterController {
 
 	@Autowired
 	private CustomerDao customerDao;
