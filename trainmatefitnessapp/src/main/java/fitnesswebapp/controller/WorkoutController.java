@@ -1,5 +1,7 @@
 package fitnesswebapp.controller;
 
+import java.util.List;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -63,4 +65,19 @@ public class WorkoutController {
 		return "home";
 	}
 	
+	
+	@GetMapping("/home") //to directly go to home page
+	public String home() {
+		return "home";
+	}
+	
+	
+	@GetMapping("/viewWorkouts")
+	public String viewWorkout(HttpSession session, Model model) {
+		Customer customer = customerDao.findByCustomerName((String)session.getAttribute("username"));
+		//based on the customer, what workouts has the user added for him
+		List<Workout> workouts = workoutDao.findByCustomerEntity(customer);
+		model.addAttribute("workouts", workouts);
+		return "viewworkouts";
+	}
 }
