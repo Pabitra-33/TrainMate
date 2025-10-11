@@ -11,5 +11,5 @@ import fitnesswebapp.model.Workout;
 @Repository
 public interface WorkoutDao extends JpaRepository<Workout, Integer> {
 
-	List<Workout> findByCustomer(Customer customer);
+	List<Workout> findByCustomerEntity(Customer customer);
 }
