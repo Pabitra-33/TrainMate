@@ -1,5 +1,7 @@
 package fitnesswebapp.controller;
 
+import java.util.List;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -57,4 +59,14 @@ public class GoalsController {
 		
 		return "home";
 	}
+	
+	
+	@GetMapping("/viewGoals")
+	public String displayGoals(HttpSession session, Model model) {
+		Customer customer = customerDao.findByCustomerName((String)session.getAttribute("username"));
+		List<Goal> goals = goalsDao.findByCustomerEntity(customer);
+		model.addAttribute("goals", goals);
+		return "viewgoals";
+	}
+	
 }
