@@ -66,7 +66,8 @@ public class WorkoutController {
 	}
 	
 	
-	@GetMapping("/home") //to directly go to home page
+	//to directly go to home page
+	@GetMapping("/home") 
 	public String home() {
 		return "home";
 	}
